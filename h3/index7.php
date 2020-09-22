@@ -24,29 +24,32 @@
     foreach($clubs as $club) {
         echo "$club <br>";
 
-
         switch ($club) {
-            case $club >= 5 && $club < 10:
-                doTheEcho(1);
+            case $club < 5:
+                doTheEcho(0);
             break;
 
-            case $club >= 10 && $club < 14:  
-                doTheEcho(2);         
+            case $club < 10:  
+                doTheEcho(1);         
             break;
 
-            case $club >= 15 && $club < 19:
+            case $club < 15:
+                doTheEcho(2);
+            break;
+
+            case $club < 20:
                 doTheEcho(3);
             break;
 
-            case $club >= 20 && $club < 24:
+            case $club < 25:
                 doTheEcho(4);
             break;
 
-            case $club >= 25 && $club < 29:
+            case $club < 30:
                 doTheEcho(5);
             break;
 
-            case $club >= 30 && $club < 34:
+            case $club < 35:
                 doTheEcho(6);
             break;
 
