@@ -7,26 +7,18 @@ $gegevens = array(
     "janjaap@apenboek.net" => "ik-hou-erg-graag-van-apen-als-je-dit-leest-jan-hallo-groetjes",
 );
 
-$email = isset($_POST['email']);
-$wachtwoord = isset($_POST['wachtwoord']);
-
-if(isset($_POST['email'])) {
-    if($gegevens[$_POST['email']] == $_POST['wachtwoord']) {
-        $_SESSION['email'] = $_POST['email'];
-        echo "Welkom";
-    } else if($gegevens[$_POST['email']] != $_POST['wachtwoord']) {
-        echo "Geen toegang!";
-    }
-}
-
-/*if (isset($_POST['knop'])) {
-
+if (isset($_POST['knop'])) {
+    $ename = $_POST['email'];
+    $pass = $_POST['wachtwoord'];
     foreach ($gegevens as $email => $password) {
+        if ($email == $ename && $password == $pass) {
+            $msg = "<p>Welkom!</p>";
 
-        if (!isset($gegevens[$email]) || $gegevens[$user] != $password) {
-            echo "no";
+        break;
         } else {
-            echo "yes";
+            $msg = "<p>Verkeerde gebruikersnaam of wachtwoord</p>";
         }
     }
-}*/
+    echo $msg;
+}
+
