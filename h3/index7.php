@@ -15,50 +15,39 @@
 
     $clubs = array($spartelkuikens, $waterbuffels, $plonsmderin, $bommetje);
 
+    function doTheEcho($number) {
+        for($i = 0; $i < $number; $i++) {
+            echo "<img width=64 height=64 src='images/zwem.png'>";
+        }
+    }
+
     foreach($clubs as $club) {
         echo "$club <br>";
-
-        $zwem = "<img width=64 height=64 src='images/zwem.png'>";
 
 
         switch ($club) {
             case $club >= 5 && $club < 10:
-                echo $zwem;
+                doTheEcho(1);
             break;
 
-            case $club >= 10 && $club < 14:            
-                echo $zwem;
-                echo $zwem;
+            case $club >= 10 && $club < 14:  
+                doTheEcho(2);         
             break;
 
             case $club >= 15 && $club < 19:
-                echo $zwem;
-                echo $zwem;
-                echo $zwem;
+                doTheEcho(3);
             break;
 
             case $club >= 20 && $club < 24:
-                echo $zwem;
-                echo $zwem;
-                echo $zwem;
-                echo $zwem;
+                doTheEcho(4);
             break;
 
             case $club >= 25 && $club < 29:
-                echo $zwem;
-                echo $zwem;
-                echo $zwem;
-                echo $zwem;
-                echo $zwem;
+                doTheEcho(5);
             break;
 
             case $club >= 30 && $club < 34:
-                echo $zwem;
-                echo $zwem;
-                echo $zwem;
-                echo $zwem;
-                echo $zwem;
-                echo $zwem;
+                doTheEcho(6);
             break;
 
         }
