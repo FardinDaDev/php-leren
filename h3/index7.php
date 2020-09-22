@@ -20,37 +20,46 @@
 
         $zwem = "<img width=64 height=64 src='images/zwem.png'>";
 
-        // grote spaghetti if else chain 
 
-        if($club >= 5 && $club < 10) {
-            echo $zwem;
-        } else if ($club >= 10 && $club < 15) { 
-            echo $zwem;
-            echo $zwem;
-        } else if ($club >= 15 && $club < 20) { 
-            echo $zwem;
-            echo $zwem;
-            echo $zwem;
-        } else if ($club >= 20 && $club < 25) { 
-            echo $zwem;
-            echo $zwem;
-            echo $zwem;
-            echo $zwem;
+        switch ($club) {
+            case $club >= 5 && $club < 10:
+                echo $zwem;
+            break;
 
-        } else if ($club >= 25 && $club < 30) { 
-            echo $zwem;
-            echo $zwem;
-            echo $zwem;
-            echo $zwem;
-            echo $zwem;
+            case $club >= 10 && $club < 14:            
+                echo $zwem;
+                echo $zwem;
+            break;
 
-        } else if ($club >= 30 && $club < 35) {
-            echo $zwem;
-            echo $zwem;
-            echo $zwem;
-            echo $zwem;
-            echo $zwem;
-            echo $zwem;
+            case $club >= 15 && $club < 19:
+                echo $zwem;
+                echo $zwem;
+                echo $zwem;
+            break;
+
+            case $club >= 20 && $club < 24:
+                echo $zwem;
+                echo $zwem;
+                echo $zwem;
+                echo $zwem;
+            break;
+
+            case $club >= 25 && $club < 29:
+                echo $zwem;
+                echo $zwem;
+                echo $zwem;
+                echo $zwem;
+                echo $zwem;
+            break;
+
+            case $club >= 30 && $club < 34:
+                echo $zwem;
+                echo $zwem;
+                echo $zwem;
+                echo $zwem;
+                echo $zwem;
+                echo $zwem;
+            break;
 
         }
 
