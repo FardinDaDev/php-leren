@@ -5,7 +5,7 @@ $pass = "";
 
 try {
     $dbh = new PDO('mysql:host=localhost;dbname=school', $user, $pass);
-    foreach ($dbh->query('SELECT * from cursist') as $row) {
+    foreach ($dbh->query('SELECT * FROM cursist') as $row) {
 
         echo "<table border='1'>
             <tr>
