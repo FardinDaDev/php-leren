@@ -36,7 +36,3 @@ try {
     echo "Error! " . $e->getMessage();
     die();
 }
-
-if (session_status() == PHP_SESSION_ACTIVE) {
-    header("Location: dashboard.php");
-}
