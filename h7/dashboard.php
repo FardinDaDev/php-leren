@@ -20,7 +20,6 @@ if (isset($_SESSION['ID']) && isset($_SESSION['email'])) {
 
 <?php
 } else {
-    header("Location: index.html");
-    exit();
+    header("Location: index.php");
 }
 ?>
