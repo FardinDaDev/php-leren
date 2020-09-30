@@ -62,8 +62,8 @@ class BroodOverzicht {
         $statement = $this->dbh->prepare("SELECT * FROM brood") or die();
         $statement->execute() or die();
 
-        while ($row = $statement->fetch()) {
-            $nieuwBroodje = new Brood($row['ID'], $row['naam'], $row['soort'], $row['vorm'], $row['gewicht']);
+        while ($array = $statement->fetch()) {
+            $nieuwBroodje = new Brood($array['ID'], $array['naam'], $array['soort'], $array['vorm'], $array['gewicht']);
             $this->broodjes[] = $nieuwBroodje;
         }
         return $this->broodjes;
