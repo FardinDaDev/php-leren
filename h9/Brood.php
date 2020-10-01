@@ -41,7 +41,7 @@ class BroodOverzicht {
     private $dbh;
     private $broodjes = [];
 
-    function __construct() {
+    public function __construct() {
         try {
             $this->dbh = new PDO('mysql:host=localhost;dbname=bakkerij', "root", "");
         
@@ -63,8 +63,8 @@ class BroodOverzicht {
         $statement->execute() or die();
 
         while ($array = $statement->fetch()) {
-            $nieuwBroodje = new Brood($array['ID'], $array['naam'], $array['soort'], $array['vorm'], $array['gewicht']);
-            $this->broodjes[] = $nieuwBroodje;
+            $nieuwBrood = new Brood($array['ID'], $array['naam'], $array['soort'], $array['vorm'], $array['gewicht']);
+            $this->broodjes[] = $nieuwBrood;
         }
         return $this->broodjes;
     }
@@ -72,11 +72,8 @@ class BroodOverzicht {
     public function updateBroodjes($id, $naam, $soort, $vorm, $gewicht) {
         if ($id != "" && $naam != "" && $gewicht != "" && $vorm != "" && $gewicht != "") {
 
-            $statement = $this->dbh->prepare("UPDATE brood SET naam=$naam, soort=$soort, vorm=$vorm, gewicht=$gewicht WHERE id = $id") or die();
+            $statement = $this->dbh->prepare("UPDATE brood SET naam=$naam, soort=$soort, vorm=$vorm, gewicht=$gewicht WHERE ID=$id") or die();
             $statement->execute() or die();
-
         }
-
     }
-
 }

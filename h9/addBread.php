@@ -15,10 +15,8 @@ $soort = isset($_POST['soort']) ? $_POST['soort'] : "";
 $vorm = isset($_POST['vorm']) ? $_POST['vorm'] : "";
 $gewicht = isset($_POST['gewicht']) ? $_POST['gewicht'] : "";
 
-//$submit = isset($_POST['knop']) ? $_POST['knop'] : "";
+$broodoverzicht = new BroodOverzicht();
 
-$broodlijst = new BroodOverzicht();
-
-$broodlijst->voegBroodToe($naam, $soort, $vorm, $gewicht);
+$broodoverzicht->voegBroodToe($naam, $soort, $vorm, $gewicht);
 
 header("Location: index.php");

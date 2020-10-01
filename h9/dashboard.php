@@ -57,7 +57,7 @@
                 </div>
 
                 <div class="column is-half">
-                    <form action="addBread.php" method="POST">
+                    <form action="updateBread.php" method="POST">
                         <div class="field">
                             <h1 class="title is-4">Update broodje</h1>
                         </div>
