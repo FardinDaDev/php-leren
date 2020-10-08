@@ -2,10 +2,9 @@
 
 include_once("Auto.php");
 
-$merk = isset($_GET["merk"]) ? $merk = $_GET["merk"] : "";
-$minPrice = isset($_GET["minPrice"]) && $_GET["minPrice"] ? $minprijs = $_GET["minPrice"] : 0;
-$maxPrice = isset($_GET["maxPrice"]) && $_GET["maxPrice"] ? $maxprijs = $_GET["maxPrice"] : 99999999;
-
+$merk = isset($_GET["merk"]) ? $_GET["merk"] : "";
+$minPrice = isset($_GET["minPrice"]) ? $_GET["minPrice"] : 0;
+$maxPrice =  isset($_GET["maxPrice"]) ? $_GET["maxPrice"] : 99999999;
 
 $autooverzicht = new AutoOverzicht();
 $autooverzicht->voegAutoToe(new Auto("Audi", "Type-1", 10000, "https://media2.autokopen.nl/afbeeldingen/audi-a3-sportback-303757-1920.jpg"));
